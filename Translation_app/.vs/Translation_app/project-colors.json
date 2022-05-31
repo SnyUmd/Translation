@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f30f201f-a386-4aaa-ab0d-cc90146cfe5a": {
+      "ProjectGuid": "f30f201f-a386-4aaa-ab0d-cc90146cfe5a",
+      "DisplayName": "Translation_app",
+      "ColorIndex": 0
+    },
+    "4a334992-62f5-4412-99e1-a070d84740b0": {
+      "ProjectGuid": "4a334992-62f5-4412-99e1-a070d84740b0",
+      "DisplayName": "Ctrl_Dll",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
