@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,23 +24,70 @@ namespace Translation_app
     {
 
         clsTranslationCtrl clsTC;
+        clsDialogCtrl clsDC;
+        clsSysCtrl clsSC;
         public MainWindow()
         {
             InitializeComponent();
             clsTC = new clsTranslationCtrl();
+            clsDC = new clsDialogCtrl();
+            clsSC = new clsSysCtrl();
+
+            this.Topmost = true;
         }
 
-        private void Btn0_Click(object sender, RoutedEventArgs e)
+        //***************************************************************************************************
+        //Ctrl部
+        //***************************************************************************************************
+
+
+        //***************************************************************************************************
+        private void Btn_ENtoJA_Click(object sender, RoutedEventArgs e)
         {
-            string msg = clsTC.SetJAtoEN("test", "en", "ja") ? "success" : "Err";
+            SetTr(TXB.Text, "ja", "en");
 
-            MessageBox.Show($"Btn0 click {msg}");
         }
 
-        private void Btn1_Click(object sender, RoutedEventArgs e)
+        //***************************************************************************************************
+        private void Btn_JAtoEN_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Btn1 click");
+            SetTr(TXB.Text, "en", "ja");
+        }
+
+        //***************************************************************************************************
+        private void TXB_en_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BtnEN(BTN_ENtoJA, TXB);
+            BtnEN(BTN_JAtoEN, TXB);
+        }
+
+        //***************************************************************************************************
+        private void BTN_Clipboad_click(object sender, RoutedEventArgs e)
+        {
+            if(clsDC.ShowMsg_YN("クリップボードの内容をテキストボックスに読込みますか？"))
+            {
+                string strClip = clsSC.GetClipboard_Text();
+                TXB.Text = "";
+                TXB.Text = strClip;
+            }
 
         }
+
+
+        //***************************************************************************************************
+        //関数部
+        //***************************************************************************************************
+        private void BtnEN(Button btn, TextBox txb)
+        {
+            btn.IsEnabled = (txb.Text != "") ? true : false;
+        }
+
+        private void SetTr(string str_vaoue, string change_language, string target_language)
+        {
+            string EnValue = TXB.Text;
+            string msg = (clsTC.SetTranslation(str_vaoue, change_language, target_language)) ? "success" : "Err";
+            Debug.WriteLine(msg);
+        }
+
     }
 }

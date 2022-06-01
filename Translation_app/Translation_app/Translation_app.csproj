@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Reference Include="Ctrl_Dll">
-      <HintPath>D:\_git\VS\Css_Ctrl\Ctrl_Dll\bin\Debug\Ctrl_Dll.dll</HintPath>
+      <HintPath>..\..\..\Css_Ctrl\Ctrl_Dll\bin\Debug\Ctrl_Dll.dll</HintPath>
     </Reference>
   </ItemGroup>
 
