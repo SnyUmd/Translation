@@ -15,6 +15,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Ctrl_Dll;
 
+
+
+
+
 namespace Translation_app
 {
     /// <summary>
@@ -23,13 +27,13 @@ namespace Translation_app
     public partial class MainWindow : Window
     {
 
-        clsTranslationCtrl clsTC;
+        clsTranslationCtrl clsTransC;
         clsDialogCtrl clsDC;
         clsSysCtrl clsSC;
         public MainWindow()
         {
             InitializeComponent();
-            clsTC = new clsTranslationCtrl();
+            clsTransC = new clsTranslationCtrl();
             clsDC = new clsDialogCtrl();
             clsSC = new clsSysCtrl();
 
@@ -73,6 +77,14 @@ namespace Translation_app
 
         }
 
+        //***************************************************************************************************
+        private void ClickBTN_Debug(object sender, RoutedEventArgs e)
+        {
+            var result_htmk = clsTransC.GetHtml("test", "en", "ja");
+            MessageBox.Show(result_htmk);
+
+        }
+
 
         //***************************************************************************************************
         //関数部
@@ -85,9 +97,14 @@ namespace Translation_app
         private void SetTr(string str_vaoue, string change_language, string target_language)
         {
             string EnValue = TXB.Text;
-            string msg = (clsTC.SetTranslation(str_vaoue, change_language, target_language)) ? "success" : "Err";
+            //string msg = (clsTransC.SetTranslation(str_vaoue, change_language, target_language)) ? "success" : "Err";
+            string strHtml = clsTransC.GetHtml(str_vaoue, change_language, target_language);
+            string msg = (strHtml != "") ? "success" : "Error";
             Debug.WriteLine(msg);
+            TXB_Result.Text = strHtml;
+
         }
+
 
     }
 }
