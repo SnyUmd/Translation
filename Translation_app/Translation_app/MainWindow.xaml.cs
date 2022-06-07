@@ -80,8 +80,10 @@ namespace Translation_app
         //***************************************************************************************************
         private void ClickBTN_Debug(object sender, RoutedEventArgs e)
         {
-            var result_htmk = clsTransC.GetHtml("test", "en", "ja");
-            MessageBox.Show(result_htmk);
+            //var result_htmk = clsTransC.GetHtml("test", "en", "ja");
+            //MessageBox.Show(result_htmk);
+            clsBrowserCtrl clsBC = new clsBrowserCtrl();
+            MessageBox.Show(clsBC.GetHtml("https://www.google.co.jp/"));
 
         }
 
