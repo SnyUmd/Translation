@@ -83,7 +83,9 @@ namespace Translation_app
             //clsBrowserCtrl clsBC = new clsBrowserCtrl();
             //MessageBox.Show(clsBC.GetHtml("https://www.google.co.jp/"));
 
-            IDataObject data = Clipboard.GetDataObject();
+
+
+            /*IDataObject data = Clipboard.GetDataObject();
             if (data != null)
             {
                 var result0 = data.GetFormats();
@@ -100,7 +102,20 @@ namespace Translation_app
             var result_ = clsCBC.GetClipBoardInf();
             //foreach (string str_ in result_)
             //    Debug.WriteLine(str_);
-            Debug.WriteLine(result_.GetType());
+            Debug.WriteLine(result_.GetType());*/
+
+
+
+            cls_Python_Ctrl clsPy = new cls_Python_Ctrl();
+            string result_ = clsPy.mPyRead(@"E:\_git\VS\Translation_app\Translation_app\Translation_app\GetText_ClipImg_.py");
+            MessageBox.Show(result_);
+        }
+
+        //***************************************************************************************************
+        private void Click_BTN_Clear(object sender, RoutedEventArgs e)
+        {
+            TXB.Text = "";
+            TXB_Result.Text = "";
         }
 
 

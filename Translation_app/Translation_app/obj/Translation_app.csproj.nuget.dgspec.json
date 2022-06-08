@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\E324595\\Documents\\_umd\\soft\\VS\\Translation\\Translation_app\\Translation_app\\Translation_app.csproj": {}
+    "E:\\_git\\VS\\Translation_app\\Translation_app\\Translation_app\\Translation_app.csproj": {}
   },
   "projects": {
-    "C:\\Users\\E324595\\Documents\\_umd\\soft\\VS\\Translation\\Translation_app\\Translation_app\\Translation_app.csproj": {
+    "E:\\_git\\VS\\Translation_app\\Translation_app\\Translation_app\\Translation_app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\E324595\\Documents\\_umd\\soft\\VS\\Translation\\Translation_app\\Translation_app\\Translation_app.csproj",
+        "projectUniqueName": "E:\\_git\\VS\\Translation_app\\Translation_app\\Translation_app\\Translation_app.csproj",
         "projectName": "Translation_app",
-        "projectPath": "C:\\Users\\E324595\\Documents\\_umd\\soft\\VS\\Translation\\Translation_app\\Translation_app\\Translation_app.csproj",
-        "packagesPath": "C:\\Users\\E324595\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\E324595\\Documents\\_umd\\soft\\VS\\Translation\\Translation_app\\Translation_app\\obj\\",
+        "projectPath": "E:\\_git\\VS\\Translation_app\\Translation_app\\Translation_app\\Translation_app.csproj",
+        "packagesPath": "C:\\Users\\shiny\\.nuget\\packages\\",
+        "outputPath": "E:\\_git\\VS\\Translation_app\\Translation_app\\Translation_app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\E324595\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shiny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows7.0"
@@ -61,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

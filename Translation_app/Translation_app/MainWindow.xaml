@@ -85,6 +85,15 @@
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
+                <Button x:Name="BTN_Clear"
+                        Grid.Column="0"
+                        Content="Clear"
+                        Background="Black"
+                        Foreground="White"
+                        IsEnabled="false"
+                        Click="Click_BTN_Clear"
+                        />
+
                 <Button x:Name="BTN_Debug"
                         Grid.Column="3"
                         Content="Debug"
@@ -93,13 +102,6 @@
                         Foreground="White"
                         Visibility="Visible"/>
 
-                <Button x:Name="BTN_Clear"
-                        Grid.Column="0"
-                        Content="Clear"
-                        Background="Black"
-                        Foreground="White"
-                        IsEnabled="false"
-                        />
 
                 <Button x:Name="BTN_Clipboad"
                         Grid.Column="5"
