@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 using Ctrl_Dll;
 
 
-
-
-
 namespace Translation_app
 {
     /// <summary>
@@ -63,6 +60,7 @@ namespace Translation_app
         {
             BtnEN(BTN_ENtoJA, TXB);
             BtnEN(BTN_JAtoEN, TXB);
+            BtnEN(BTN_Clear, TXB);
         }
 
         //***************************************************************************************************
@@ -82,9 +80,27 @@ namespace Translation_app
         {
             //var result_htmk = clsTransC.GetHtml("test", "en", "ja");
             //MessageBox.Show(result_htmk);
-            clsBrowserCtrl clsBC = new clsBrowserCtrl();
-            MessageBox.Show(clsBC.GetHtml("https://www.google.co.jp/"));
+            //clsBrowserCtrl clsBC = new clsBrowserCtrl();
+            //MessageBox.Show(clsBC.GetHtml("https://www.google.co.jp/"));
 
+            IDataObject data = Clipboard.GetDataObject();
+            if (data != null)
+            {
+                var result0 = data.GetFormats();
+                //関連付けられているすべての形式を列挙する
+                foreach (string fmt in result0)
+                {
+                    Debug.WriteLine(fmt);
+                }
+                Debug.WriteLine(result0.GetType());
+            }
+
+            cls_ClipBoardCtrl clsCBC = new cls_ClipBoardCtrl();
+
+            var result_ = clsCBC.GetClipBoardInf();
+            //foreach (string str_ in result_)
+            //    Debug.WriteLine(str_);
+            Debug.WriteLine(result_.GetType());
         }
 
 
@@ -96,6 +112,7 @@ namespace Translation_app
             btn.IsEnabled = (txb.Text != "") ? true : false;
         }
 
+        //***************************************************************************************************
         private void SetTr(string str_vaoue, string change_language, string target_language)
         {
             string EnValue = TXB.Text;
@@ -104,7 +121,6 @@ namespace Translation_app
             string msg = (strHtml != "") ? "success" : "Error";
             Debug.WriteLine(msg);
             TXB_Result.Text = strHtml;
-
         }
 
 
