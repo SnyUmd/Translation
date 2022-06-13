@@ -104,10 +104,11 @@ namespace Translation_app
             //    Debug.WriteLine(str_);
             Debug.WriteLine(result_.GetType());*/
 
-
-
+            string PyPath_ip = @"C:\Users\E324595\Documents\_umd\soft\VS\Translation\Translation_app\Translation_app\GetText_ClipImg_.pyw";
+            string PyPath_umd = @"E:\_git\VS\Translation_app\Translation_app\Translation_app\GetText_ClipImg_.pyw";
+            
             cls_Python_Ctrl clsPy = new cls_Python_Ctrl();
-            string result_ = clsPy.mPyRead(@"E:\_git\VS\Translation_app\Translation_app\Translation_app\GetText_ClipImg_.py");
+            string result_ = clsPy.mPyRead(PyPath_ip);
             MessageBox.Show(result_);
         }
 
