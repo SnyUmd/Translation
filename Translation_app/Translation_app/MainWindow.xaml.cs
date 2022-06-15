@@ -76,7 +76,16 @@ namespace Translation_app
         }
 
         //***************************************************************************************************
-        private void ClickBTN_Debug(object sender, RoutedEventArgs e)
+        private void Click_BTN_TxChange(object sender, RoutedEventArgs e)
+        {
+            cls_TextCtrl clsTC = new cls_TextCtrl();
+            string tx_ = clsTC.mDelChar(this.TXB.Text, "\r\n");
+            tx_ = clsTC.mChangeChar(tx_, ".", ".\r\n");
+            TXB.Text = tx_;
+        }
+
+        //***************************************************************************************************
+        private void Click_BTN_Debug(object sender, RoutedEventArgs e)
         {
             //var result_htmk = clsTransC.GetHtml("test", "en", "ja");
             //MessageBox.Show(result_htmk);
@@ -104,12 +113,18 @@ namespace Translation_app
             //    Debug.WriteLine(str_);
             Debug.WriteLine(result_.GetType());*/
 
-            string PyPath_ip = @"C:\Users\E324595\Documents\_umd\soft\VS\Translation\Translation_app\Translation_app\GetText_ClipImg_.pyw";
+            /*string PyPath_ip = @"C:\Users\E324595\Documents\_umd\soft\VS\Translation\Translation_app\Translation_app\GetText_ClipImg_.pyw";
             string PyPath_umd = @"E:\_git\VS\Translation_app\Translation_app\Translation_app\GetText_ClipImg_.pyw";
             
             cls_Python_Ctrl clsPy = new cls_Python_Ctrl();
             string result_ = clsPy.mPyRead(PyPath_ip);
-            MessageBox.Show(result_);
+            MessageBox.Show(result_);*/
+
+            cls_TextCtrl clsTC = new cls_TextCtrl();
+            string tx_ = clsTC.mDelChar(this.TXB.Text, "\r\n");
+            tx_ = clsTC.mChangeChar(tx_, ".", ".\r\n");
+            TXB.Text = tx_;
+
         }
 
         //***************************************************************************************************
