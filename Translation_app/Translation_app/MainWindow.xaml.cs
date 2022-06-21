@@ -61,6 +61,7 @@ namespace Translation_app
             BtnEN(BTN_ENtoJA, TXB);
             BtnEN(BTN_JAtoEN, TXB);
             BtnEN(BTN_Clear, TXB);
+            BtnEN(BTN_TxChange, TXB);
         }
 
         //***************************************************************************************************
@@ -132,6 +133,14 @@ namespace Translation_app
         {
             TXB.Text = "";
             TXB_Result.Text = "";
+        }
+
+        //***************************************************************************************************
+        private void Checked_CKB_Topmost(object sender, RoutedEventArgs e)
+        {
+            //if (CKB_Topmost.IsChecked == true)
+            //    this.Topmost = true;
+            this.Topmost = (CKB_Topmost.IsChecked == true) ? true : false;
         }
 
 

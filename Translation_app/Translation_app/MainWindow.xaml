@@ -63,9 +63,11 @@
 
         <Grid Grid.Row="5" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.8*"/>
                 <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
@@ -89,12 +91,20 @@
                     Click="Btn_JAtoEN_Click" 
                     Foreground="White"/>
 
-            <Grid Grid.Column="4">
+            <CheckBox x:Name="CKB_Topmost"
+                      Grid.Column="4"
+                      VerticalAlignment="Center"
+                      Content="Top"
+                      IsChecked="True"
+                      Checked="Checked_CKB_Topmost"
+                      Unchecked="Checked_CKB_Topmost"/>
+
+            <Grid Grid.Column="6">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="5"/>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="65"/>
                     <ColumnDefinition Width="5"/>
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
@@ -110,7 +120,7 @@
 
                 <Button x:Name="BTN_TxChange"
                         Grid.Column="3"
-                        Content="TxChange"
+                        Content="txtChange"
                         Click="Click_BTN_TxChange"
                         Background="black"
                         Foreground="White"
