@@ -124,7 +124,8 @@
                         Click="Click_BTN_TxChange"
                         Background="black"
                         Foreground="White"
-                        Visibility="Visible"/>
+                        Visibility="Visible"
+                        IsEnabled="False"/>
 
 
                 <Button x:Name="BTN_Clipboad"
